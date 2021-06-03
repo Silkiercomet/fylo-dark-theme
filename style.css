@@ -114,9 +114,12 @@ nav{
 }
 
 .seehow{
+    max-width: 17ch;
     color: var(--cyan);
     display: flex;
     align-items: center;
+    text-decoration: none;
+    border-bottom:1px solid var(--cyan);
 }
 .seehow img{
     padding-left: 0.3rem;
@@ -128,8 +131,9 @@ nav{
 /* profiles */
 .profiles {
     display: grid;
+    padding: 0 2.5rem;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(390px, 1fr));
     place-items: center;
 }
 .profiles .card:nth-child(1){
