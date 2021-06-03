@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Raleway', sans-serif; */
+
 :root{
     --cyan:hsl(176, 68%, 64%);
     --blue:hsl(198, 60%, 50%);
@@ -131,7 +130,7 @@ nav{
 /* profiles */
 .profiles {
     display: grid;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit,minmax(390px, 1fr));
     place-items: center;
@@ -148,6 +147,7 @@ nav{
 }
 
 .profiles .card{
+    width: 100%;
     background-color: var(--testimonials-blue);
     text-align: start;
     padding:  1.5rem; 
@@ -238,7 +238,8 @@ nav{
 }
 .footer-content{
     display: grid;
-    grid-template-columns:  30% 28% 10% 10% 22%;
+    grid-gap: 25px;
+    grid-template-columns: 30% 18% 12% 12% 22%;
 }
 .footer-content ul{
     transition: 600ms;
@@ -253,9 +254,10 @@ nav{
 
 
 .social-media-icons ul{
+    padding-top: 0.2rem;
     display: flex;
     list-style: none;
-    
+    justify-content: flex-start;
 }
 
 .social-media-icons ul li a{
@@ -282,8 +284,7 @@ nav{
     list-style: url(images/icon-phone.svg) ;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: flex-start;
 }
 .email-f{
     list-style: url(images/icon-email.svg);
@@ -437,7 +438,6 @@ nav{
         justify-content: center;
     }
 
-    
 
 }
 
