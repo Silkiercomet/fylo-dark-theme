@@ -109,6 +109,9 @@ nav{
     font-size: 2.5rem;
     max-width: 15ch;
 }
+.showcase .left{
+    margin-bottom: 2rem;
+}
 
 .seehow{
     color: var(--cyan);
@@ -125,8 +128,19 @@ nav{
 /* profiles */
 .profiles {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
     place-items: center;
+}
+.profiles .card:nth-child(1){
+    position:relative;
+
+}
+.profiles .card:nth-child(1) .quote{
+    position:absolute;
+    left: -3%;
+    top: -14%;
+    z-index: -2;
 }
 
 .profiles .card{
@@ -308,15 +322,17 @@ nav{
         flex-direction: column;
         padding: 1.5rem;
         justify-content: center;
+        margin-top: 3rem;
     }
     .showcase .left img{
-        width: 90%;
+        width: 100%;
+        padding: 0 1.5rem;
     }
     .showcase .right{
         padding: 0 ;
     }
     .showcase h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
         max-width: 100%;
     }
 
@@ -324,6 +340,7 @@ nav{
     /* profiles */
     .profiles {
         grid-template-columns: 1fr;
+        margin-top: 5rem;
     }
     .profiles .card{
         padding:  1.5rem; 
