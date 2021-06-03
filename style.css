@@ -45,10 +45,11 @@ nav{
     padding: 0 2rem;
 }
 .content li a{
-    transition: 600ms ease;
+    transition: ease 600ms;
 }
 .content li a:hover{
     text-decoration: underline;
+    font-weight: 700;
 }
 
 /* navbar */
@@ -122,6 +123,11 @@ nav{
 /* showcase */
 
 /* profiles */
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    place-items: center;
+}
 
 .profiles .card{
     background-color: var(--testimonials-blue);
@@ -189,11 +195,15 @@ nav{
     height: 40px;
     width: 30%;
     padding: 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
 }
 .error{
     display: none;
     padding: 0;
     margin: 0;
+    color: red;
 }
 
 /* floated card */
@@ -203,20 +213,31 @@ nav{
 .footer{
     background-color: var(--blue-dark-footer);
     padding:10rem 2.5rem 2.5rem 2.5rem ;
-    
+    height: 450px;
 }
 .footer .logo{
     width: 100%;
 }
 .footer-content{
     display: grid;
-    grid-template-columns:  repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:  30% 28% 10% 10% 22%;
 }
+.footer-content ul{
+    transition: 600ms;
+}
+.list > li{
+    cursor: pointer;
+}
+.list li:hover{
+    font-weight:700;
+}
+    
 
 
 .social-media-icons ul{
     display: flex;
     list-style: none;
+    
 }
 
 .social-media-icons ul li a{
@@ -224,6 +245,11 @@ nav{
     border-radius: 50%;
     color: white;
     padding: 0.4rem;
+    transition: 600ms;
+}
+.social-media-icons ul li a:hover{
+    color: var(--cyan);
+    border-color: var(--cyan);
 }
 .social-media-icons ul li:nth-child(2){
     padding: 0 1rem;
@@ -231,9 +257,170 @@ nav{
 .social-media-icons ul li:nth-child(1) a{
     padding: 0.4rem 0.6rem;
 }
-
+.location{
+    list-style: url(images/icon-location.svg);
+}
+.contact-f{
+    list-style: url(images/icon-phone.svg) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.email-f{
+    list-style: url(images/icon-email.svg);
+}
 
 /* footer */
+
+/* media queries */
+
+@media (max-width:900px){
+    /* navbar */
+    nav{
+        padding: 1.5rem;   
+    }
+    .logo a img{
+        max-width: 85%;
+    }
+    .content li a:hover{
+        text-decoration: underline;
+        font-weight: 400;
+    }
+
+    /* hero */
+    .hero{
+        padding: 1.5rem;
+        background-image: url(images/bg-curvy-mobile.svg);
+        background-size: 100% 65%;
+    }
+    .hero img{
+        width: 100%;
+    }
+    /* features */
+    .grid1{
+        grid-template-columns: 1fr;
+    }
+
+    /* showcase */
+
+    .showcase{
+        flex-direction: column;
+        padding: 1.5rem;
+        justify-content: center;
+    }
+    .showcase .left img{
+        width: 90%;
+    }
+    .showcase .right{
+        padding: 0 ;
+    }
+    .showcase h1{
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+
+    /* profiles */
+    .profiles {
+        grid-template-columns: 1fr;
+    }
+    .profiles .card{
+        padding:  1.5rem; 
+        margin: 1rem 0;
+
+    }
+
+    /* floated card */
+
+    .floated-card{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+    }
+    .floated-card .card{
+        width: 90%;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    .floated-card .card h1{
+        font-size: 2rem;
+    }
+    .floated-card .card .input-email{
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+    }
+    .floated-card .card .input-email .email-text{
+        width: 100%;
+        padding-right: 0;
+    }
+    .floated-card .card .input-email .email-text #email{
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    #email-button{
+        width: 100%;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .error{
+        font-size: 0.8rem;
+    }
+    /* footer */
+
+    .footer{
+        background-color: var(--blue-dark-footer);
+        padding:10rem 1.5rem 1.5rem 1.5rem ;
+        height: 100%;
+    }
+    .footer .logo{
+        width: 100%;
+        display: flex;
+    }
+    .footer .logo img{
+        padding: 1.5rem;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+    .footer-content ul{
+        transition: 600ms;
+    }
+    .list > li{
+        cursor: pointer;
+    }
+    .list li:hover{
+        font-weight:700;
+    }
+    .contact-f{
+        list-style: url(images/icon-phone.svg) ;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+        
+    .list{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .social-media-icons ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+    }
+
+    
+
+}
+
+/* media queries */
 
 /* utilities */
 
@@ -248,11 +435,10 @@ h1,h2,h3, nav, .seehow, .btn{
     border-radius: 2rem;
     transition: 600ms ease;
 }
-.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-    place-items: center;
+.btn:hover{
+    background-color: hsl(176, 61%, 73%);
 }
+
 h1{
     font-size: 2.5rem;
 }
@@ -260,4 +446,13 @@ h1{
     width: 400px;
     text-align: center;
     padding: 2rem 1rem; 
+}
+.p-t{
+    padding-top: 1rem;
+}
+.list{
+    list-style: none;
+}
+.p-l{
+    padding-left: 0.6rem;
 }
